@@ -44,22 +44,22 @@ int main(){
     HardwareMovement currentMovement;
     int currentFloor;
 
+    while(1){
 
-    switch (currentState)
-    {
-    case IDLE:{//kode for IDLE}
-        break;
-    case IDLE_door_open:{//kode for IDLE_door_open}
-        break;
-    case Going_down:{//kode for going down}
-        break;
-    case Going_up:{//kode for going up}
-        break;
-    case Order_exp:{//order expedition procedure}
-        break;
-
+        switch (currentState)
+        {
+        case IDLE: {}//kode for IDLE}
+          break;
+        case IDLE_door_open: {}//kode for IDLE_door_open}
+            break;
+        case Going_down: {}//kode for going down}
+           break;
+        case Going_up: {}//kode for going up}
+           break;
+        case Order_exp: {}//order expedition procedure}
+           break;
+        }
     }
-
     
 
 

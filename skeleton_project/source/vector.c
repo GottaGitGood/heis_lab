@@ -20,7 +20,7 @@ void vector_add(vector *v, void *e)
 	if (v->size == 0) {
 		v->size = 10;
 		v->data = malloc(sizeof(void*) * v->size);
-		memset(v->data, '\0', sizeof(void) * v->size);
+		memset(v->data, '\0', sizeof(void*) * v->size);
 	}
 
 	// condition to increase v->data:
@@ -46,7 +46,7 @@ void vector_set(vector *v, int index, void *e)
 void *vector_get(vector *v, int index)
 {
 	if (index >= v->count) {
-		return;
+		return NULL;
 	}
 
 	return v->data[index];
@@ -80,32 +80,32 @@ void vector_free(vector *v)
 	free(v->data);
 }
 
-int main(void)
-{
-	vector v;
-	vector_init(&v);
-
-	vector_add(&v, "emil");
-	vector_add(&v, "hannes");
-	vector_add(&v, "lydia");
-	vector_add(&v, "olle");
-	vector_add(&v, "erik");
-
-	int i;
-	printf("first round:\n");
-	for (i = 0; i < vector_count(&v); i++) {
-		printf("%s\n", vector_get(&v, i));
-	}
-
-	vector_delete(&v, 1);
-	vector_delete(&v, 3);
-
-	printf("second round:\n");
-	for (i = 0; i < vector_count(&v); i++) {
-		printf("%s\n", vector_get(&v, i));
-	}
-
-	vector_free(&v);
-
-	return 0;
-}
+//int main(void)
+//{
+//	vector v;
+//	vector_init(&v);
+//
+//	vector_add(&v, "emil");
+//	vector_add(&v, "hannes");
+//	vector_add(&v, "lydia");
+//	vector_add(&v, "olle");
+//	vector_add(&v, "erik");
+//
+//	int i;
+//	printf("first round:\n");
+//	for (i = 0; i < vector_count(&v); i++) {
+//		printf("%s\n", vector_get(&v, i));
+//	}
+//
+//	vector_delete(&v, 1);
+//	vector_delete(&v, 3);
+//
+//	printf("second round:\n");
+//	for (i = 0; i < vector_count(&v); i++) {
+//		printf("%s\n", vector_get(&v, i));
+//	}
+//
+//	vector_free(&v);
+//
+//	return 0;
+//}

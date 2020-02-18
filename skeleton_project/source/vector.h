@@ -1,3 +1,7 @@
+/**
+ * @file
+ * @brief implementation of dynamic array(vector)
+ */
 #ifndef VECTOR_H__
 #define VECTOR_H__
 
